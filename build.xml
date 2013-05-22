@@ -7,7 +7,6 @@
     <target name="build">
         <mkdir dir="build/classes/" />
         <mkdir dir="build/data/" />
-        <copy file="security.policy.in" tofile="build/security.policy" overwrite="true" />
         <javac srcdir="src" destdir="build/classes" />
         <rmic classname="de.tuc.collagecreator.server.CollageServerImpl" base="build/classes/" />
         <jar destfile="build/server.jar" basedir="build/classes">
