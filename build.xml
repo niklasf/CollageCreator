@@ -8,6 +8,9 @@
         <mkdir dir="build/classes/" />
         <mkdir dir="build/data/" />
         <copy file="run-rmiregistry.sh.in" tofile="build/run-rmiregistry.sh" overwrite="true" />
+        <copy file="run-rmiregistry.bat.in" tofile="build/run-rmiregistry.bat" overwrite="true" />
+        <copy file="run-server.bat.in" tofile="build/run-server.bat" overwrite="true" />
+        <copy file="run-client.bat.in" tofile="build/run-client.bat" overwrite="true" />
         <chmod file="build/run-rmiregistry.sh" perm="ugo+rx" />
         <javac srcdir="src" destdir="build/classes" />
         <rmic classname="de.tuc.collagecreator.server.CollageServerImpl" base="build/classes/" />

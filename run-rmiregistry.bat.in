@@ -1,0 +1,1 @@
+rmiregistry -J-Djava.class.path=server.jar 1234
