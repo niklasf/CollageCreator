@@ -1,4 +1,4 @@
-<project>
+<project default="build">
 
     <target name="clean">
         <delete dir="dist/" />
@@ -12,7 +12,7 @@
         <copy file="run-server.bat.in" tofile="build/run-server.bat" overwrite="true" />
         <copy file="run-client.bat.in" tofile="build/run-client.bat" overwrite="true" />
         <chmod file="build/run-rmiregistry.sh" perm="ugo+rx" />
-        <javac srcdir="src" destdir="build/classes" />
+        <javac srcdir="src" destdir="build/classes" includeantruntime="false" />
         <rmic classname="de.tuc.collagecreator.server.CollageServerImpl" base="build/classes/" />
         <jar destfile="build/server.jar" basedir="build/classes">
             <manifest>
