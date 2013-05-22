@@ -1,0 +1,5 @@
+penguins.jpg: http://commons.wikimedia.org/wiki/File:Falkland_Islands_Penguins_36.jpg
+pyramids.jpg: http://commons.wikimedia.org/wiki/File:Altes_%C3%84gypten_002.jpg
+sunflower.jpg: http://commons.wikimedia.org/wiki/File:Sonnenblume.jpg
+parrot.jpg: https://commons.wikimedia.org/wiki/File:Hellroter.jpg
+bishop:jpg: https://en.wikipedia.org/wiki/File:StauntonBishop2.jpg
