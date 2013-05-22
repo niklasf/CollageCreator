@@ -5,15 +5,16 @@
     </target>
 
     <target name="build">
-        <mkdir dir="build/bin/" />
+        <mkdir dir="build/classes/" />
         <mkdir dir="build/data/" />
-        <javac srcdir="src" destdir="build/bin" />
-        <jar destfile="build/server.jar" basedir="build/bin">
+        <javac srcdir="src" destdir="build/classes" />
+        <rmic classname="de.tuc.collagecreator.server.CollageServerImpl" base="build/classes/" />
+        <jar destfile="build/server.jar" basedir="build/classes">
             <manifest>
                 <attribute name="Main-Class" value="de.tuc.collagecreator.server.ServerProc" />
             </manifest>
         </jar>
-        <jar destfile="build/client.jar" basedir="build/bin">
+        <jar destfile="build/client.jar" basedir="build/classes">
             <manifest>
                 <attribute name="Main-Class" value="de.tuc.collagecreator.client.ClientFrame" />
             </manifest>

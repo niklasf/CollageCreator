@@ -4,11 +4,13 @@ Homework. See task.pdf.
 
 Build
 -----
-ant build
+
+  export JAVA_HOME=/usr/lib/jvm/java-6-openjdk-amd64/ # or similar, if needed
+  ant build
 
 Run
 ---
-cd build/
-rmiregistry 1234
-java -jar server.jar
-java -jar client.jar
+  cd build/
+  rmiregistry 1234 &
+  java -jar server.jar &
+  java -jar client.jar
