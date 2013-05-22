@@ -11,6 +11,6 @@ Build
 Run
 ---
   cd build/
-  rmiregistry 1234 &
+  rmiregistry -J-Djava.class.path=server.jar 1234 &
   java -Djava.security.policy=security.policy -jar server.jar &
   java -jar client.jar

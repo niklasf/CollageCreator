@@ -33,14 +33,14 @@ public class CollageServerImpl extends UnicastRemoteObject implements
 	@Override
 	public void addImage(SerializableImageWrapper image) throws IOException {
 		ImageIO.write(image.getImage(), "png",
-				new File("../data/" + UUID.randomUUID() + ".png"));
+				new File("./data/" + UUID.randomUUID() + ".png"));
 	}
 
 	@Override
 	public SerializableImageWrapper generateCollage(
 			SerializableImageWrapper template, int multi, int tileWidth,
 			int tileHeight) {
-		Database db = new Database("../data");
+		Database db = new Database("./data");
 		return new SerializableImageWrapper(createCollage(db,
 				template.getImage(), multi, tileWidth, tileHeight));
 	}
