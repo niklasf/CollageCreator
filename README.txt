@@ -12,5 +12,5 @@ Run
 ---
   cd build/
   rmiregistry 1234 &
-  java -jar server.jar &
+  java -Djava.security.policy=security.policy -jar server.jar &
   java -jar client.jar
