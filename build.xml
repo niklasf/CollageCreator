@@ -1,7 +1,7 @@
 <project default="build">
 
     <target name="clean">
-        <delete dir="dist/" />
+        <delete dir="build/" />
     </target>
 
     <target name="build">
