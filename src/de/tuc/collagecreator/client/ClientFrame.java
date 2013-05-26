@@ -73,15 +73,15 @@ public class ClientFrame extends JFrame {
 		JPanel settingsPanel = new JPanel();
 
 		settingsPanel.add(new JLabel("Tile instances:"));
-		multiSpinner = new JSpinner(new SpinnerNumberModel(100, 1, 1000, 1));
+		multiSpinner = new JSpinner(new SpinnerNumberModel(10, 1, 1000, 1));
 		settingsPanel.add(multiSpinner);
 
 		settingsPanel.add(new JLabel("Tile width:"));
-		tileWidthSpinner = new JSpinner(new SpinnerNumberModel(10, 1, 64, 1));
+		tileWidthSpinner = new JSpinner(new SpinnerNumberModel(30, 1, 64, 1));
 		settingsPanel.add(tileWidthSpinner);
 
 		settingsPanel.add(new JLabel("Tile height:"));
-		tileHeightSpinner = new JSpinner(new SpinnerNumberModel(10, 1, 64, 1));
+		tileHeightSpinner = new JSpinner(new SpinnerNumberModel(30, 1, 64, 1));
 		settingsPanel.add(tileHeightSpinner);
 
 		return settingsPanel;
