@@ -14,8 +14,6 @@ public class ImagePanel extends JPanel {
 
 	private BufferedImage image;
 
-	private boolean valid = true;
-
 	public ImagePanel() {
 		this.setPreferredSize(new Dimension(400, 100));
 	}
@@ -27,19 +25,11 @@ public class ImagePanel extends JPanel {
 		this.repaint();
 	}
 
-	public void setValid(boolean valid) {
-		this.valid = valid;
-	}
-
 	@Override
 	protected void paintComponent(Graphics graphics) {
 		Graphics2D g = (Graphics2D) graphics;
 		super.paintComponent(g);
 		if (image != null) {
-			if (!valid) {
-				g.setComposite(AlphaComposite.getInstance(
-						AlphaComposite.SRC_OVER, 0.1f));
-			}
 			g.drawImage(image, (this.getWidth() - image.getWidth()) / 2,
 					(this.getHeight() - image.getHeight()) / 2, null);
 		}
